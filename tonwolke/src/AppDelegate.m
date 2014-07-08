@@ -2,6 +2,9 @@
 #import "WelcomeViewController.h"
 #import "TWConstants.h"
 #import "AuthTokenParser.h"
+#import "KeychainManager.h"
+#import "JSAlertView.h"
+
 
 
 @implementation AppDelegate
@@ -11,6 +14,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     [self showWelcome];
     
     return YES;
@@ -26,11 +30,33 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     if ([urlAbsString rangeOfString:[self.class _authCallbackUrlString]].location != NSNotFound) {
         
-        NSString *code = [AuthTokenParser codeFromUrlString:urlAbsString];
         NSString *accessToken = [AuthTokenParser accessTokenFromUrlString:urlAbsString];
-        
+        if (accessToken) {
+            [KeychainManager setString:accessToken
+                                forKey:@"accessToken"];
+            [self showMain];
+        }
+        else {
+            [self logoutWithMessage:@"An error occured!"];
+        }
     }
     return NO;
+}
+
+- (void)logoutWithMessage:(NSString *)message {
+    [[JSAlertView withTitle:message
+                    message:nil
+     jsAlertViewButtonItems:@[
+                              [JSAlertViewButtonItem withTitle:@"Ok"
+                                                  onClickBlock:nil]
+                              ]
+      ] show];
+    
+    [self showWelcome];
+}
+
+- (void)showMain {
+    
 }
 
 - (void)showWelcome {

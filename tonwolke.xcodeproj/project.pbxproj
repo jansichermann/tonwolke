@@ -64,6 +64,9 @@
 		3DE6C017196C84390005A513 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6C015196C84390005A513 /* InfoPlist.strings */; };
 		3DE6C021196C846F0005A513 /* AuthTokenParser_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */; };
 		3DE6C024196C84B60005A513 /* AuthTokenParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C023196C84B60005A513 /* AuthTokenParser.m */; };
+		3DE6C25D196CA3980005A513 /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C25C196CA3980005A513 /* KeychainManager.m */; };
+		3DE6C25F196CA50F0005A513 /* Keychain_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C25E196CA50F0005A513 /* Keychain_Tests.m */; };
+		3DE6C262196CA6C40005A513 /* KeychainManager+TW.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C261196CA6C40005A513 /* KeychainManager+TW.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +188,11 @@
 		3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthTokenParser_Tests.m; sourceTree = "<group>"; };
 		3DE6C022196C84B60005A513 /* AuthTokenParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthTokenParser.h; sourceTree = "<group>"; };
 		3DE6C023196C84B60005A513 /* AuthTokenParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthTokenParser.m; sourceTree = "<group>"; };
+		3DE6C25B196CA3980005A513 /* KeychainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainManager.h; sourceTree = "<group>"; };
+		3DE6C25C196CA3980005A513 /* KeychainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainManager.m; sourceTree = "<group>"; };
+		3DE6C25E196CA50F0005A513 /* Keychain_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain_Tests.m; sourceTree = "<group>"; };
+		3DE6C260196CA6C40005A513 /* KeychainManager+TW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeychainManager+TW.h"; sourceTree = "<group>"; };
+		3DE6C261196CA6C40005A513 /* KeychainManager+TW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KeychainManager+TW.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +272,8 @@
 		3DE6BF71196C78130005A513 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3DE6C25B196CA3980005A513 /* KeychainManager.h */,
+				3DE6C25C196CA3980005A513 /* KeychainManager.m */,
 				3DE6BF72196C78130005A513 /* AppDelegate.h */,
 				3DE6BF73196C78130005A513 /* AppDelegate.m */,
 				3DE6BF74196C78130005A513 /* main.m */,
@@ -273,6 +283,8 @@
 				3DE6C009196C7C6D0005A513 /* TWConstants.h */,
 				3DE6C022196C84B60005A513 /* AuthTokenParser.h */,
 				3DE6C023196C84B60005A513 /* AuthTokenParser.m */,
+				3DE6C260196CA6C40005A513 /* KeychainManager+TW.h */,
+				3DE6C261196CA6C40005A513 /* KeychainManager+TW.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -423,6 +435,7 @@
 			children = (
 				3DE6C013196C84390005A513 /* Supporting Files */,
 				3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */,
+				3DE6C25E196CA50F0005A513 /* Keychain_Tests.m */,
 			);
 			path = "tonwolke Tests";
 			sourceTree = "<group>";
@@ -535,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE6BFEC196C7B890005A513 /* UIControl+JS.m in Sources */,
+				3DE6C262196CA6C40005A513 /* KeychainManager+TW.m in Sources */,
 				3DE6C004196C7B890005A513 /* JSSegmentedControl.m in Sources */,
 				3DE6BFF3196C7B890005A513 /* JSAttributedStringTableViewCell.m in Sources */,
 				3DE6BFEF196C7B890005A513 /* UILabel+JS.m in Sources */,
@@ -545,6 +559,7 @@
 				3DE6BFE2196C7B890005A513 /* NSAttributedString+JS.m in Sources */,
 				3DE6C006196C7B890005A513 /* JSTextField.m in Sources */,
 				3DE6C002196C7B890005A513 /* JSPageControl.m in Sources */,
+				3DE6C25D196CA3980005A513 /* KeychainManager.m in Sources */,
 				3DE6BF79196C78130005A513 /* AppDelegate.m in Sources */,
 				3DE6BFE9196C7B890005A513 /* NSString+JS.m in Sources */,
 				3DE6BFDF196C7B890005A513 /* JSButton.m in Sources */,
@@ -587,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE6C021196C846F0005A513 /* AuthTokenParser_Tests.m in Sources */,
+				3DE6C25F196CA50F0005A513 /* Keychain_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +791,7 @@
 				3DE6BF68196C6C900005A513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DE6C01D196C84390005A513 /* Build configuration list for PBXNativeTarget "tonwolke Tests" */ = {
 			isa = XCConfigurationList;
@@ -783,6 +800,7 @@
 				3DE6C01F196C84390005A513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
