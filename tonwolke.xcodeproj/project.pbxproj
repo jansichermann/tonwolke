@@ -161,6 +161,7 @@
 		3DE6BFDB196C7B890005A513 /* JSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTextView.m; sourceTree = "<group>"; };
 		3DE6BFDC196C7B890005A513 /* JSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
 		3DE6BFDD196C7B890005A513 /* JSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		3DE6C009196C7C6D0005A513 /* TWConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +235,7 @@
 				3DE6BF75196C78130005A513 /* tonwolke-Prefix.pch */,
 				3DE6BF7E196C7A960005A513 /* WelcomeViewController.h */,
 				3DE6BF7F196C7A960005A513 /* WelcomeViewController.m */,
+				3DE6C009196C7C6D0005A513 /* TWConstants.h */,
 			);
 			path = src;
 			sourceTree = "<group>";

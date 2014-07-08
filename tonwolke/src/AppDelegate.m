@@ -1,4 +1,6 @@
 #import "AppDelegate.h"
+#import "WelcomeViewController.h"
+#import "TWConstants.h"
 
 
 
@@ -9,8 +11,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    [self showAuth];
+    [self showWelcome];
     
     return YES;
 }
@@ -20,13 +21,82 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     
+    NSString *urlAbsString = url.absoluteString;
     
+    
+    if ([urlAbsString rangeOfString:[self.class _authCallbackUrlString]].location != NSNotFound) {
+        
+        NSString *code = [self.class _codeFromUrlString:urlAbsString];
+        NSString *accessToken = [self.class _accessTokenFromUrlString:urlAbsString];
+        
+    }
     return NO;
-    
 }
 
-- (void)showAuth {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://soundcloud.com/connect?client_id=8b067895a0bda9b1fcdeaed3b8cedb32&redirect_uri=tonwolke%3A%2F%2Fsoundcloud%2Fcallback&response_type=code_and_token&scope=non-expiring"]];
+- (void)showWelcome {
+    self.window.rootViewController = [[WelcomeViewController alloc] init];
+}
+
++ (NSString *)_authCallbackUrlString {
+    NSString *scheme = [self _appUriScheme];
+    return scheme ? [scheme stringByAppendingFormat:@"://%@", kCallBackPath] : nil;
+}
+
++ (NSString *)_appUriScheme {
+    NSArray *a = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"];
+    if (!a || ![a isKindOfClass:[NSArray class]]) {
+        return nil;
+    }
+    
+    NSDictionary *urlDict = a.firstObject;
+    if (!urlDict || ![urlDict isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+    
+    NSArray *schemes = [urlDict objectForKey:@"CFBundleURLSchemes"];
+    if (!schemes || ![schemes isKindOfClass:[NSArray class]]) {
+        return nil;
+    }
+    
+    return schemes.firstObject; //returns nil if schemes.count == 0
+}
+
++ (NSString *)_codeFromUrlString:(NSString *)urlString {
+    NSString *code = nil;
+    
+    NSMutableCharacterSet *cs = [[NSMutableCharacterSet alloc] init];
+    [cs addCharactersInString:@"?#&"];
+    NSArray *comps = [urlString componentsSeparatedByCharactersInSet:cs.copy];
+    
+    for (NSString *comp in comps) {
+        NSString *codeSearchString = @"code=";
+        NSRange codeRange = [comp rangeOfString:codeSearchString];
+        
+        if (codeRange.location != NSNotFound) {
+            code = [comp substringFromIndex:codeRange.location + codeSearchString.length];
+        }
+    }
+    
+    return code;
+}
+
++ (NSString *)_accessTokenFromUrlString:(NSString *)urlString {
+    NSString *accessToken = nil;
+    
+    NSMutableCharacterSet *cs = [[NSMutableCharacterSet alloc] init];
+    [cs addCharactersInString:@"?#&"];
+    NSArray *comps = [urlString componentsSeparatedByCharactersInSet:cs.copy];
+    
+    NSString *accessTokenSearchString = @"access_token=";
+    for (NSString *comp in comps) {
+        
+        NSRange accessTokenRange = [comp rangeOfString:accessTokenSearchString];
+        if (accessTokenRange.location != NSNotFound) {
+            accessToken = [comp substringFromIndex:accessTokenRange.location + accessTokenRange.length];
+        }
+    }
+    
+    return accessToken;
 }
 
 @end
