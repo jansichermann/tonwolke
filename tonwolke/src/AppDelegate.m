@@ -1,7 +1,7 @@
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
 #import "TWConstants.h"
-
+#import "AuthTokenParser.h"
 
 
 @implementation AppDelegate
@@ -26,8 +26,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     if ([urlAbsString rangeOfString:[self.class _authCallbackUrlString]].location != NSNotFound) {
         
-        NSString *code = [self.class _codeFromUrlString:urlAbsString];
-        NSString *accessToken = [self.class _accessTokenFromUrlString:urlAbsString];
+        NSString *code = [AuthTokenParser codeFromUrlString:urlAbsString];
+        NSString *accessToken = [AuthTokenParser accessTokenFromUrlString:urlAbsString];
         
     }
     return NO;
@@ -59,44 +59,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     }
     
     return schemes.firstObject; //returns nil if schemes.count == 0
-}
-
-+ (NSString *)_codeFromUrlString:(NSString *)urlString {
-    NSString *code = nil;
-    
-    NSMutableCharacterSet *cs = [[NSMutableCharacterSet alloc] init];
-    [cs addCharactersInString:@"?#&"];
-    NSArray *comps = [urlString componentsSeparatedByCharactersInSet:cs.copy];
-    
-    for (NSString *comp in comps) {
-        NSString *codeSearchString = @"code=";
-        NSRange codeRange = [comp rangeOfString:codeSearchString];
-        
-        if (codeRange.location != NSNotFound) {
-            code = [comp substringFromIndex:codeRange.location + codeSearchString.length];
-        }
-    }
-    
-    return code;
-}
-
-+ (NSString *)_accessTokenFromUrlString:(NSString *)urlString {
-    NSString *accessToken = nil;
-    
-    NSMutableCharacterSet *cs = [[NSMutableCharacterSet alloc] init];
-    [cs addCharactersInString:@"?#&"];
-    NSArray *comps = [urlString componentsSeparatedByCharactersInSet:cs.copy];
-    
-    NSString *accessTokenSearchString = @"access_token=";
-    for (NSString *comp in comps) {
-        
-        NSRange accessTokenRange = [comp rangeOfString:accessTokenSearchString];
-        if (accessTokenRange.location != NSNotFound) {
-            accessToken = [comp substringFromIndex:accessTokenRange.location + accessTokenRange.length];
-        }
-    }
-    
-    return accessToken;
 }
 
 @end

@@ -58,7 +58,23 @@
 		3DE6C006196C7B890005A513 /* JSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFD9196C7B890005A513 /* JSTextField.m */; };
 		3DE6C007196C7B890005A513 /* JSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFDB196C7B890005A513 /* JSTextView.m */; };
 		3DE6C008196C7B890005A513 /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFDD196C7B890005A513 /* JSViewController.m */; };
+		3DE6C00F196C84390005A513 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF56196C6C900005A513 /* XCTest.framework */; };
+		3DE6C010196C84390005A513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3D196C6C900005A513 /* Foundation.framework */; };
+		3DE6C011196C84390005A513 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF41196C6C900005A513 /* UIKit.framework */; };
+		3DE6C017196C84390005A513 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6C015196C84390005A513 /* InfoPlist.strings */; };
+		3DE6C021196C846F0005A513 /* AuthTokenParser_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */; };
+		3DE6C024196C84B60005A513 /* AuthTokenParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C023196C84B60005A513 /* AuthTokenParser.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE6C01B196C84390005A513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE6BF32196C6C900005A513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE6BF39196C6C900005A513;
+			remoteInfo = tonwolke;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3DE6BF3A196C6C900005A513 /* tonwolke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonwolke.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +178,13 @@
 		3DE6BFDC196C7B890005A513 /* JSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
 		3DE6BFDD196C7B890005A513 /* JSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
 		3DE6C009196C7C6D0005A513 /* TWConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWConstants.h; sourceTree = "<group>"; };
+		3DE6C00E196C84390005A513 /* tonwolke Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tonwolke Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE6C014196C84390005A513 /* tonwolke Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tonwolke Tests-Info.plist"; sourceTree = "<group>"; };
+		3DE6C016196C84390005A513 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE6C01A196C84390005A513 /* tonwolke Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tonwolke Tests-Prefix.pch"; sourceTree = "<group>"; };
+		3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthTokenParser_Tests.m; sourceTree = "<group>"; };
+		3DE6C022196C84B60005A513 /* AuthTokenParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthTokenParser.h; sourceTree = "<group>"; };
+		3DE6C023196C84B60005A513 /* AuthTokenParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthTokenParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +198,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DE6C00B196C84390005A513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE6C00F196C84390005A513 /* XCTest.framework in Frameworks */,
+				3DE6C011196C84390005A513 /* UIKit.framework in Frameworks */,
+				3DE6C010196C84390005A513 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -182,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE6BF43196C6C900005A513 /* tonwolke */,
+				3DE6C012196C84390005A513 /* tonwolke Tests */,
 				3DE6BF3C196C6C900005A513 /* Frameworks */,
 				3DE6BF3B196C6C900005A513 /* Products */,
 			);
@@ -191,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE6BF3A196C6C900005A513 /* tonwolke.app */,
+				3DE6C00E196C84390005A513 /* tonwolke Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +271,8 @@
 				3DE6BF7E196C7A960005A513 /* WelcomeViewController.h */,
 				3DE6BF7F196C7A960005A513 /* WelcomeViewController.m */,
 				3DE6C009196C7C6D0005A513 /* TWConstants.h */,
+				3DE6C022196C84B60005A513 /* AuthTokenParser.h */,
+				3DE6C023196C84B60005A513 /* AuthTokenParser.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -381,6 +418,25 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		3DE6C012196C84390005A513 /* tonwolke Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6C013196C84390005A513 /* Supporting Files */,
+				3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */,
+			);
+			path = "tonwolke Tests";
+			sourceTree = "<group>";
+		};
+		3DE6C013196C84390005A513 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6C014196C84390005A513 /* tonwolke Tests-Info.plist */,
+				3DE6C015196C84390005A513 /* InfoPlist.strings */,
+				3DE6C01A196C84390005A513 /* tonwolke Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -401,6 +457,24 @@
 			productReference = 3DE6BF3A196C6C900005A513 /* tonwolke.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3DE6C00D196C84390005A513 /* tonwolke Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE6C01D196C84390005A513 /* Build configuration list for PBXNativeTarget "tonwolke Tests" */;
+			buildPhases = (
+				3DE6C00A196C84390005A513 /* Sources */,
+				3DE6C00B196C84390005A513 /* Frameworks */,
+				3DE6C00C196C84390005A513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE6C01C196C84390005A513 /* PBXTargetDependency */,
+			);
+			name = "tonwolke Tests";
+			productName = "tonwolke Tests";
+			productReference = 3DE6C00E196C84390005A513 /* tonwolke Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -409,6 +483,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jan Sichermann";
+				TargetAttributes = {
+					3DE6C00D196C84390005A513 = {
+						TestTargetID = 3DE6BF39196C6C900005A513;
+					};
+				};
 			};
 			buildConfigurationList = 3DE6BF35196C6C900005A513 /* Build configuration list for PBXProject "tonwolke" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -423,6 +502,7 @@
 			projectRoot = "";
 			targets = (
 				3DE6BF39196C6C900005A513 /* tonwolke */,
+				3DE6C00D196C84390005A513 /* tonwolke Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -439,6 +519,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DE6C00C196C84390005A513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE6C017196C84390005A513 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -451,6 +539,7 @@
 				3DE6BFF3196C7B890005A513 /* JSAttributedStringTableViewCell.m in Sources */,
 				3DE6BFEF196C7B890005A513 /* UILabel+JS.m in Sources */,
 				3DE6BFF1196C7B890005A513 /* UISplitViewController+JS.m in Sources */,
+				3DE6C024196C84B60005A513 /* AuthTokenParser.m in Sources */,
 				3DE6BF7A196C78130005A513 /* main.m in Sources */,
 				3DE6BFE3196C7B890005A513 /* NSData+JS.m in Sources */,
 				3DE6BFE2196C7B890005A513 /* NSAttributedString+JS.m in Sources */,
@@ -493,13 +582,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DE6C00A196C84390005A513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE6C021196C846F0005A513 /* AuthTokenParser_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE6C01C196C84390005A513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE6BF39196C6C900005A513 /* tonwolke */;
+			targetProxy = 3DE6C01B196C84390005A513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3DE6BF6D196C78130005A513 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3DE6BF6E196C78130005A513 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DE6C015196C84390005A513 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE6C016196C84390005A513 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -603,6 +716,46 @@
 			};
 			name = Release;
 		};
+		3DE6C01E196C84390005A513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tonwolke.app/tonwolke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tonwolke Tests/tonwolke Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tonwolke Tests/tonwolke Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3DE6C01F196C84390005A513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tonwolke.app/tonwolke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tonwolke Tests/tonwolke Tests-Prefix.pch";
+				INFOPLIST_FILE = "tonwolke Tests/tonwolke Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -620,6 +773,14 @@
 			buildConfigurations = (
 				3DE6BF67196C6C900005A513 /* Debug */,
 				3DE6BF68196C6C900005A513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3DE6C01D196C84390005A513 /* Build configuration list for PBXNativeTarget "tonwolke Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE6C01E196C84390005A513 /* Debug */,
+				3DE6C01F196C84390005A513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

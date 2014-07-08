@@ -38,6 +38,16 @@
                ReferencedContainer = "container:tonwolke.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3DE6C00D196C84390005A513"
+               BuildableName = "tonwolke Tests.xctest"
+               BlueprintName = "tonwolke Tests"
+               ReferencedContainer = "container:tonwolke.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
