@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE6BF3E196C6C900005A513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3D196C6C900005A513 /* Foundation.framework */; };
+		3DE6BF40196C6C900005A513 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3F196C6C900005A513 /* CoreGraphics.framework */; };
+		3DE6BF42196C6C900005A513 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF41196C6C900005A513 /* UIKit.framework */; };
+		3DE6BF76196C78130005A513 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6BF6D196C78130005A513 /* InfoPlist.strings */; };
+		3DE6BF77196C78130005A513 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6BF6F196C78130005A513 /* Images.xcassets */; };
+		3DE6BF79196C78130005A513 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BF73196C78130005A513 /* AppDelegate.m */; };
+		3DE6BF7A196C78130005A513 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BF74196C78130005A513 /* main.m */; };
+		3DE6BF80196C7A960005A513 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BF7F196C7A960005A513 /* WelcomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DE6BF3A196C6C900005A513 /* tonwolke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonwolke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE6BF3D196C6C900005A513 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DE6BF3F196C6C900005A513 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DE6BF41196C6C900005A513 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3DE6BF56196C6C900005A513 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3DE6BF6E196C78130005A513 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE6BF6F196C78130005A513 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3DE6BF70196C78130005A513 /* tonwolke-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tonwolke-Info.plist"; sourceTree = "<group>"; };
+		3DE6BF72196C78130005A513 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3DE6BF73196C78130005A513 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3DE6BF74196C78130005A513 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DE6BF75196C78130005A513 /* tonwolke-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tonwolke-Prefix.pch"; sourceTree = "<group>"; };
+		3DE6BF7E196C7A960005A513 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		3DE6BF7F196C7A960005A513 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE6BF37196C6C900005A513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE6BF40196C6C900005A513 /* CoreGraphics.framework in Frameworks */,
+				3DE6BF42196C6C900005A513 /* UIKit.framework in Frameworks */,
+				3DE6BF3E196C6C900005A513 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE6BF31196C6C900005A513 = {
+			isa = PBXGroup;
+			children = (
+				3DE6BF43196C6C900005A513 /* tonwolke */,
+				3DE6BF3C196C6C900005A513 /* Frameworks */,
+				3DE6BF3B196C6C900005A513 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE6BF3B196C6C900005A513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6BF3A196C6C900005A513 /* tonwolke.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE6BF3C196C6C900005A513 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6BF3D196C6C900005A513 /* Foundation.framework */,
+				3DE6BF3F196C6C900005A513 /* CoreGraphics.framework */,
+				3DE6BF41196C6C900005A513 /* UIKit.framework */,
+				3DE6BF56196C6C900005A513 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DE6BF43196C6C900005A513 /* tonwolke */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6BF6C196C78130005A513 /* resources */,
+				3DE6BF71196C78130005A513 /* src */,
+			);
+			path = tonwolke;
+			sourceTree = "<group>";
+		};
+		3DE6BF6C196C78130005A513 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6BF6D196C78130005A513 /* InfoPlist.strings */,
+				3DE6BF6F196C78130005A513 /* Images.xcassets */,
+				3DE6BF70196C78130005A513 /* tonwolke-Info.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3DE6BF71196C78130005A513 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3DE6BF72196C78130005A513 /* AppDelegate.h */,
+				3DE6BF73196C78130005A513 /* AppDelegate.m */,
+				3DE6BF74196C78130005A513 /* main.m */,
+				3DE6BF75196C78130005A513 /* tonwolke-Prefix.pch */,
+				3DE6BF7E196C7A960005A513 /* WelcomeViewController.h */,
+				3DE6BF7F196C7A960005A513 /* WelcomeViewController.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE6BF39196C6C900005A513 /* tonwolke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE6BF66196C6C900005A513 /* Build configuration list for PBXNativeTarget "tonwolke" */;
+			buildPhases = (
+				3DE6BF36196C6C900005A513 /* Sources */,
+				3DE6BF37196C6C900005A513 /* Frameworks */,
+				3DE6BF38196C6C900005A513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tonwolke;
+			productName = tonwolke;
+			productReference = 3DE6BF3A196C6C900005A513 /* tonwolke.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE6BF32196C6C900005A513 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jan Sichermann";
+			};
+			buildConfigurationList = 3DE6BF35196C6C900005A513 /* Build configuration list for PBXProject "tonwolke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DE6BF31196C6C900005A513;
+			productRefGroup = 3DE6BF3B196C6C900005A513 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE6BF39196C6C900005A513 /* tonwolke */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE6BF38196C6C900005A513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE6BF76196C78130005A513 /* InfoPlist.strings in Resources */,
+				3DE6BF77196C78130005A513 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE6BF36196C6C900005A513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE6BF7A196C78130005A513 /* main.m in Sources */,
+				3DE6BF79196C78130005A513 /* AppDelegate.m in Sources */,
+				3DE6BF80196C7A960005A513 /* WelcomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3DE6BF6D196C78130005A513 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE6BF6E196C78130005A513 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DE6BF64196C6C900005A513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DE6BF65196C6C900005A513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DE6BF67196C6C900005A513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tonwolke/src/tonwolke-Prefix.pch";
+				INFOPLIST_FILE = "tonwolke/resources/tonwolke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3DE6BF68196C6C900005A513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tonwolke/src/tonwolke-Prefix.pch";
+				INFOPLIST_FILE = "tonwolke/resources/tonwolke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE6BF35196C6C900005A513 /* Build configuration list for PBXProject "tonwolke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE6BF64196C6C900005A513 /* Debug */,
+				3DE6BF65196C6C900005A513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE6BF66196C6C900005A513 /* Build configuration list for PBXNativeTarget "tonwolke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE6BF67196C6C900005A513 /* Debug */,
+				3DE6BF68196C6C900005A513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DE6BF32196C6C900005A513 /* Project object */;
+}
