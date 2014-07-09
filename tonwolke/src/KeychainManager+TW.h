@@ -9,6 +9,6 @@
 
 
 @interface KeychainManager (TW)
-- (NSString *)token;
-- (void)setToken:(NSString *)token;
++ (NSString *)token;
++ (void)setToken:(NSString *)token;
 @end

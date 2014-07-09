@@ -7,11 +7,11 @@
 
 static NSString const *tokenKey = @"accessTokenKey";
 
-- (NSString *)token {
++ (NSString *)token {
     return [KeychainManager stringForKey:(NSString *)tokenKey];
 }
 
-- (void)setToken:(NSString *)token {
++ (void)setToken:(NSString *)token {
     [KeychainManager setString:token
                         forKey:(NSString *)tokenKey];
 }

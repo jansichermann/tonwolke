@@ -2,8 +2,8 @@
 #import "JSButton.h"
 #import "UIView+JS.h"
 #import "TWConstants.h"
-
-
+#import "AppDelegate.h" // move this
+#import "NSString+JS.h"
 
 @interface WelcomeViewController ()
 
@@ -25,13 +25,15 @@
     [self.view addSubview:b];
     [b centerVerticallyInSuperview];
     
+    NSString *callbackUrlEncoded = [[AppDelegate authCallbackUrlString] urlEncoded];
+    
     b.touchUpInsideBlock = ^(__unused JSButton *bb) {
         NSURL *authUrl =
         [NSURL URLWithString:
          [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@&response_type=code_and_token&scope=non-expiring",
           kConnectUrl,
           kAppId,
-          kCallBackUriEncoded
+          callbackUrlEncoded
           ]
          ];
         [[UIApplication sharedApplication] openURL:authUrl];

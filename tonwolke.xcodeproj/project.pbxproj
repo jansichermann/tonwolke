@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7F5571196D90D700CF4A4A /* TWSCApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F5570196D90D700CF4A4A /* TWSCApi.m */; };
+		3D91C483196CAF1200EDE2C3 /* StreamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91C482196CAF1200EDE2C3 /* StreamTableViewController.m */; };
 		3DE6BF3E196C6C900005A513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3D196C6C900005A513 /* Foundation.framework */; };
 		3DE6BF40196C6C900005A513 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3F196C6C900005A513 /* CoreGraphics.framework */; };
 		3DE6BF42196C6C900005A513 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF41196C6C900005A513 /* UIKit.framework */; };
@@ -80,6 +82,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D7F556F196D90D700CF4A4A /* TWSCApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSCApi.h; sourceTree = "<group>"; };
+		3D7F5570196D90D700CF4A4A /* TWSCApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSCApi.m; sourceTree = "<group>"; };
+		3D91C481196CAF1200EDE2C3 /* StreamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamTableViewController.h; sourceTree = "<group>"; };
+		3D91C482196CAF1200EDE2C3 /* StreamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamTableViewController.m; sourceTree = "<group>"; };
 		3DE6BF3A196C6C900005A513 /* tonwolke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tonwolke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE6BF3D196C6C900005A513 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DE6BF3F196C6C900005A513 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -285,6 +291,10 @@
 				3DE6C023196C84B60005A513 /* AuthTokenParser.m */,
 				3DE6C260196CA6C40005A513 /* KeychainManager+TW.h */,
 				3DE6C261196CA6C40005A513 /* KeychainManager+TW.m */,
+				3D91C481196CAF1200EDE2C3 /* StreamTableViewController.h */,
+				3D91C482196CAF1200EDE2C3 /* StreamTableViewController.m */,
+				3D7F556F196D90D700CF4A4A /* TWSCApi.h */,
+				3D7F5570196D90D700CF4A4A /* TWSCApi.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -552,6 +562,7 @@
 				3DE6C004196C7B890005A513 /* JSSegmentedControl.m in Sources */,
 				3DE6BFF3196C7B890005A513 /* JSAttributedStringTableViewCell.m in Sources */,
 				3DE6BFEF196C7B890005A513 /* UILabel+JS.m in Sources */,
+				3D7F5571196D90D700CF4A4A /* TWSCApi.m in Sources */,
 				3DE6BFF1196C7B890005A513 /* UISplitViewController+JS.m in Sources */,
 				3DE6C024196C84B60005A513 /* AuthTokenParser.m in Sources */,
 				3DE6BF7A196C78130005A513 /* main.m in Sources */,
@@ -588,6 +599,7 @@
 				3DE6BFF2196C7B890005A513 /* UIView+JS.m in Sources */,
 				3DE6BFED196C7B890005A513 /* UIImage+ImageEffects.m in Sources */,
 				3DE6BFFC196C7B890005A513 /* JSTableViewSectionModel.m in Sources */,
+				3D91C483196CAF1200EDE2C3 /* StreamTableViewController.m in Sources */,
 				3DE6BFE5196C7B890005A513 /* NSDictionary+JS.m in Sources */,
 				3DE6C005196C7B890005A513 /* JSTableViewController.m in Sources */,
 				3DE6BFE4196C7B890005A513 /* NSDate+JS.m in Sources */,
@@ -736,6 +748,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tonwolke.app/tonwolke";
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -747,6 +770,16 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "tonwolke Tests/tonwolke Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -758,6 +791,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tonwolke.app/tonwolke";
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -765,6 +809,16 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tonwolke Tests/tonwolke Tests-Prefix.pch";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "tonwolke Tests/tonwolke Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
