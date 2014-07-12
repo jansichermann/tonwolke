@@ -7,6 +7,9 @@
 #import "UIBarButtonItem+JSButton.h"
 #import "JSAlertView.h"
 #import "AppDelegate.h"
+#import "UIFont+TWSC.h"
+#import "UIColor+TWSC.h"
+
 
 @interface StreamTableViewController ()
 
@@ -18,28 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor TWSCBackgroundColor];
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.navigationItem.leftBarButtonItem = [self.class _logoutBarButtonItem];
+    
     [self refreshWithCursor:nil];
-    
-    self.
-    
-    self.navigationItem.leftBarButtonItem =
-    [UIBarButtonItem barButtonItemWithTitle:@"Logout"
-                                       font:[UIFont systemFontOfSize:14.f]
-                                 clickBlock:
-     ^{
-         [[JSAlertView withTitle:@"Logout?"
-                         message:@"Really want to log out?"
-          jsAlertViewButtonItems:
-           @[
-             [JSAlertViewButtonItem withTitle:@"Yes"
-                                 onClickBlock:^{
-                                     [(AppDelegate *)[UIApplication sharedApplication].delegate logoutWithMessage:nil];
-                                 }],
-             [JSAlertViewButtonItem withTitle:@"No"
-                                 onClickBlock:nil],
-             ]
-           ] show];
-     }];
 }
 
 - (void)refreshWithCursor:(NSString *)cursor {
@@ -54,14 +45,6 @@
                   }];
 }
 
-+ (JSTableViewRowModel *)_rowModelForTrack:(Track *)track {
-    return [JSTableViewRowModel withModel:track
-                         cellClass:[TrackTableViewCell class]
-                           onClick:^{
-                               [StreamTableViewController openTrack:track];
-                           }];
-}
-
 - (void)reloadWithTracks:(NSArray *)tracks {
     [self resetSections];
     
@@ -74,6 +57,36 @@
     [self addSection:[JSTableViewSectionModel sectionWithRows:rows.copy]];
     
     [self.tableView reloadData];
+}
+
++ (JSTableViewRowModel *)_rowModelForTrack:(Track *)track {
+    return [JSTableViewRowModel withModel:track
+                                cellClass:[TrackTableViewCell class]
+                          backgroundColor:[UIColor clearColor]
+                                  onClick:^{
+                                      [StreamTableViewController openTrack:track];
+                                  }
+            ];
+}
+
++ (UIBarButtonItem *)_logoutBarButtonItem {
+    return [UIBarButtonItem barButtonItemWithTitle:@"Logout"
+                                              font:[UIFont fontWithSize:14.f]
+                                        clickBlock:
+            ^{
+                [[JSAlertView withTitle:@"Logout?"
+                                message:@"Really want to log out?"
+                 jsAlertViewButtonItems:
+                  @[
+                    [JSAlertViewButtonItem withTitle:@"Yes"
+                                        onClickBlock:^{
+                                            [(AppDelegate *)[UIApplication sharedApplication].delegate logoutWithMessage:nil];
+                                        }],
+                    [JSAlertViewButtonItem withTitle:@"No"
+                                        onClickBlock:nil],
+                    ]
+                  ] show];
+            }];
 }
 
 + (void)openTrack:(Track *)track {

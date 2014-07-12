@@ -13,6 +13,8 @@
 		3D2C728D19719F3200551630 /* Track_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C728C19719F3200551630 /* Track_Tests.m */; };
 		3D2C72901971A0E800551630 /* JS__NotificationObserverContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C728F1971A0E800551630 /* JS__NotificationObserverContainer.m */; };
 		3D2C72931971AAC000551630 /* TrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C72921971AAC000551630 /* TrackTableViewCell.m */; };
+		3D2C72961971AF5000551630 /* UIFont+TWSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C72951971AF5000551630 /* UIFont+TWSC.m */; };
+		3D2C72991971AFB600551630 /* UIColor+TWSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C72981971AFB600551630 /* UIColor+TWSC.m */; };
 		3D7F5571196D90D700CF4A4A /* TWSCApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F5570196D90D700CF4A4A /* TWSCApi.m */; };
 		3D91C483196CAF1200EDE2C3 /* StreamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91C482196CAF1200EDE2C3 /* StreamTableViewController.m */; };
 		3DE6BF3E196C6C900005A513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3D196C6C900005A513 /* Foundation.framework */; };
@@ -97,6 +99,10 @@
 		3D2C728F1971A0E800551630 /* JS__NotificationObserverContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JS__NotificationObserverContainer.m; sourceTree = "<group>"; };
 		3D2C72911971AAC000551630 /* TrackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackTableViewCell.h; sourceTree = "<group>"; };
 		3D2C72921971AAC000551630 /* TrackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTableViewCell.m; sourceTree = "<group>"; };
+		3D2C72941971AF5000551630 /* UIFont+TWSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+TWSC.h"; sourceTree = "<group>"; };
+		3D2C72951971AF5000551630 /* UIFont+TWSC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TWSC.m"; sourceTree = "<group>"; };
+		3D2C72971971AFB600551630 /* UIColor+TWSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TWSC.h"; sourceTree = "<group>"; };
+		3D2C72981971AFB600551630 /* UIColor+TWSC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TWSC.m"; sourceTree = "<group>"; };
 		3D7F556F196D90D700CF4A4A /* TWSCApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSCApi.h; sourceTree = "<group>"; };
 		3D7F5570196D90D700CF4A4A /* TWSCApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSCApi.m; sourceTree = "<group>"; };
 		3D91C481196CAF1200EDE2C3 /* StreamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamTableViewController.h; sourceTree = "<group>"; };
@@ -322,6 +328,10 @@
 				3D2C728A19719C9100551630 /* Track.m */,
 				3D2C72911971AAC000551630 /* TrackTableViewCell.h */,
 				3D2C72921971AAC000551630 /* TrackTableViewCell.m */,
+				3D2C72941971AF5000551630 /* UIFont+TWSC.h */,
+				3D2C72951971AF5000551630 /* UIFont+TWSC.m */,
+				3D2C72971971AFB600551630 /* UIColor+TWSC.h */,
+				3D2C72981971AFB600551630 /* UIColor+TWSC.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -593,6 +603,7 @@
 				3D2C728B19719C9100551630 /* Track.m in Sources */,
 				3DE6BFF3196C7B890005A513 /* JSAttributedStringTableViewCell.m in Sources */,
 				3DE6BFEF196C7B890005A513 /* UILabel+JS.m in Sources */,
+				3D2C72991971AFB600551630 /* UIColor+TWSC.m in Sources */,
 				3D7F5571196D90D700CF4A4A /* TWSCApi.m in Sources */,
 				3D2C72931971AAC000551630 /* TrackTableViewCell.m in Sources */,
 				3DE6BFF1196C7B890005A513 /* UISplitViewController+JS.m in Sources */,
@@ -636,6 +647,7 @@
 				3DE6BFE5196C7B890005A513 /* NSDictionary+JS.m in Sources */,
 				3DE6C005196C7B890005A513 /* JSTableViewController.m in Sources */,
 				3DE6BFE4196C7B890005A513 /* NSDate+JS.m in Sources */,
+				3D2C72961971AF5000551630 /* UIFont+TWSC.m in Sources */,
 				3DE6BFF5196C7B890005A513 /* JSSpacingTableViewCell.m in Sources */,
 				3DE6BFFE196C7B890005A513 /* JSActionSheetController.m in Sources */,
 				3DE6BFE0196C7B890005A513 /* JSViewController+JSNavigationItems.m in Sources */,

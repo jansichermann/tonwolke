@@ -5,7 +5,7 @@
 #import "KeychainManager+TW.h"
 #import "JSAlertView.h"
 #import "StreamTableViewController.h"
-
+#import "UIColor+TWSC.h"
 
 
 @implementation AppDelegate
@@ -16,9 +16,16 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    [self.class setAppearance];
     [KeychainManager token].length > 0 ? [self showMain] : [self showWelcome];
     
     return YES;
+}
+
++ (void)setAppearance {
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor TWSCBackgroundColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (BOOL)application:(UIApplication *)application
