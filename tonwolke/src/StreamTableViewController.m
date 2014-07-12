@@ -38,6 +38,8 @@
     
     NSMutableArray *rows = [NSMutableArray arrayWithCapacity:tracks.count];
     
+    __weak StreamTableViewController *weakSelf = self;
+    
     for (NSDictionary *track in tracks) {
         [rows addObject:
          [JSTableViewRowModel withModel:
@@ -46,13 +48,20 @@
                                      font:[UIFont systemFontOfSize:14.f]
                                     color:[UIColor blackColor]]]
                               cellClass:[JSAttributedStringTableViewCell class]
-          ]
+                                onClick:^{
+                                    StreamTableViewController *strongSelf = weakSelf;
+                                    [strongSelf openSound];
+                                }]
          ];
     }
     
     [self addSection:[JSTableViewSectionModel sectionWithRows:rows.copy]];
     
     [self.tableView reloadData];
+}
+
+- (void)openSound {
+    
 }
 
 @end
