@@ -1,9 +1,8 @@
 #import "StreamTableViewController.h"
 #import "TWSCApi.h"
-#import "JSAttributedStringTableViewCell.h"
+#import "TrackTableViewCell.h"
 #import "JSTableViewRowModel.h"
 #import "JSTableViewSectionModel.h"
-#import "NSAttributedString+JS.h"
 #import "Track.h"
 #import "UIBarButtonItem+JSButton.h"
 #import "JSAlertView.h"
@@ -20,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self refreshWithCursor:nil];
+    
+    self.
     
     self.navigationItem.leftBarButtonItem =
     [UIBarButtonItem barButtonItemWithTitle:@"Logout"
@@ -53,26 +54,21 @@
                   }];
 }
 
++ (JSTableViewRowModel *)_rowModelForTrack:(Track *)track {
+    return [JSTableViewRowModel withModel:track
+                         cellClass:[TrackTableViewCell class]
+                           onClick:^{
+                               [StreamTableViewController openTrack:track];
+                           }];
+}
+
 - (void)reloadWithTracks:(NSArray *)tracks {
     [self resetSections];
     
     NSMutableArray *rows = [NSMutableArray arrayWithCapacity:tracks.count];
     
-    __weak StreamTableViewController *weakSelf = self;
-    
     for (Track *track in tracks) {
-        [rows addObject:
-         [JSTableViewRowModel withModel:
-          [JSAttributedStringTableViewCellModel withText:
-           [NSAttributedString withString:track.title
-                                     font:[UIFont systemFontOfSize:14.f]
-                                    color:[UIColor blackColor]]]
-                              cellClass:[JSAttributedStringTableViewCell class]
-                                onClick:^{
-                                    StreamTableViewController *strongSelf = weakSelf;
-                                    [strongSelf openTrack:track];
-                                }]
-         ];
+        [rows addObject:[self.class _rowModelForTrack:track]];
     }
     
     [self addSection:[JSTableViewSectionModel sectionWithRows:rows.copy]];
@@ -80,7 +76,7 @@
     [self.tableView reloadData];
 }
 
-- (void)openTrack:(Track *)track {
++ (void)openTrack:(Track *)track {
     
 }
 
