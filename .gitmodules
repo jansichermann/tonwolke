@@ -1,3 +1,6 @@
 [submodule "tonwolke/submodules/JS"]
 	path = tonwolke/submodules/JS
 	url = git@github.com:jansichermann/JS.git
+[submodule "tonwolke/submodules/JJSObject"]
+	path = tonwolke/submodules/JJSObject
+	url = git@github.com:jansichermann/JJSObject.git

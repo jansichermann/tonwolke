@@ -57,7 +57,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 
 - (void)showMain {
-    self.window.rootViewController = [[StreamTableViewController alloc] init];
+    self.window.rootViewController =
+    [[UINavigationController alloc] initWithRootViewController:[[StreamTableViewController alloc] init]];
 }
 
 - (void)showWelcome {
