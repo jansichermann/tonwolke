@@ -8,7 +8,6 @@
 #import "JSAlertView.h"
 #import "AppDelegate.h"
 #import "UIFont+TWSC.h"
-#import "UIColor+TWSC.h"
 
 
 @interface StreamTableViewController ()
@@ -22,15 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor TWSCBackgroundColor];
-    
     self.tableView.backgroundColor = [UIColor clearColor];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
     self.navigationItem.leftBarButtonItem = [self.class _logoutBarButtonItem];
-    
+
     [self refreshWithCursor:nil];
+
 }
 
 - (void)refreshWithCursor:(NSString *)cursor {
@@ -63,6 +60,7 @@
     return [JSTableViewRowModel withModel:track
                                 cellClass:[TrackTableViewCell class]
                           backgroundColor:[UIColor clearColor]
+                           selectionStyle:UITableViewCellSelectionStyleNone
                                   onClick:^{
                                       [StreamTableViewController openTrack:track];
                                   }

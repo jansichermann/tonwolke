@@ -9,5 +9,6 @@
 
 
 @interface Track : JJSObject
-@property (nonatomic) NSString *title;
+@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) NSString *waveform_url;
 @end

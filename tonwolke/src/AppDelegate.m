@@ -23,8 +23,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 
 + (void)setAppearance {
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor TWSCBackgroundColor]];
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor TWSCBackgroundColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
