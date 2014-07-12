@@ -12,8 +12,13 @@ static NSString const *tokenKey = @"accessTokenKey";
 }
 
 + (void)setToken:(NSString *)token {
-    [KeychainManager setString:token
-                        forKey:(NSString *)tokenKey];
+    if (!token) {
+        [KeychainManager deleteItemForKey:(NSString *)tokenKey];
+    }
+    else {
+        [KeychainManager setString:token
+                            forKey:(NSString *)tokenKey];
+    }
 }
 
 @end

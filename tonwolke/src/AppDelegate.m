@@ -45,13 +45,18 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 
 - (void)logoutWithMessage:(NSString *)message {
-    [[JSAlertView withTitle:message
-                    message:nil
-     jsAlertViewButtonItems:@[
-                              [JSAlertViewButtonItem withTitle:@"Ok"
-                                                  onClickBlock:nil]
-                              ]
-      ] show];
+    [KeychainManager setToken:nil];
+    
+    if (message.length > 0) {
+        [[JSAlertView withTitle:message
+                        message:nil
+         jsAlertViewButtonItems:
+          @[
+            [JSAlertViewButtonItem withTitle:@"Ok"
+                                onClickBlock:nil]
+            ]
+          ] show];
+    }
     
     [self showWelcome];
 }

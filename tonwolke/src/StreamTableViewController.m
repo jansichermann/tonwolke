@@ -5,8 +5,9 @@
 #import "JSTableViewSectionModel.h"
 #import "NSAttributedString+JS.h"
 #import "Track.h"
-
-
+#import "UIBarButtonItem+JSButton.h"
+#import "JSAlertView.h"
+#import "AppDelegate.h"
 
 @interface StreamTableViewController ()
 
@@ -19,6 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self refreshWithCursor:nil];
+    
+    self.navigationItem.leftBarButtonItem =
+    [UIBarButtonItem barButtonItemWithTitle:@"Logout"
+                                       font:[UIFont systemFontOfSize:14.f]
+                                 clickBlock:
+     ^{
+         [[JSAlertView withTitle:@"Logout?"
+                         message:@"Really want to log out?"
+          jsAlertViewButtonItems:
+           @[
+             [JSAlertViewButtonItem withTitle:@"Yes"
+                                 onClickBlock:^{
+                                     [(AppDelegate *)[UIApplication sharedApplication].delegate logoutWithMessage:nil];
+                                 }],
+             [JSAlertViewButtonItem withTitle:@"No"
+                                 onClickBlock:nil],
+             ]
+           ] show];
+     }];
 }
 
 - (void)refreshWithCursor:(NSString *)cursor {

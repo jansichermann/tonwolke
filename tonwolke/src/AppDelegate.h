@@ -13,4 +13,5 @@
 @property (strong, nonatomic) UIWindow *window;
 + (NSString *)authCallbackUrlString;
 + (NSString *)appUriScheme;
+- (void)logoutWithMessage:(NSString *)message;
 @end

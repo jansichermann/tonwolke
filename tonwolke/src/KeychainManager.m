@@ -87,7 +87,10 @@ static NSString * const keychainIdentifier = @"com.jansichermann.tonwolke";
     [self _searchDirectoryForIdentifier:key];
     
     NSData *valueData = [string dataUsingEncoding:NSUTF8StringEncoding];
-    [dictionary setObject:valueData forKey:(__bridge id)kSecValueData];
+    
+    [dictionary setObject:valueData
+                   forKey:(__bridge id)kSecValueData];
+    
     [dictionary setObject:(__bridge id)kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
                    forKey:(__bridge id)kSecAttrAccessible];
     OSStatus status = SecItemAdd((__bridge CFDictionaryRef)dictionary, NULL);
