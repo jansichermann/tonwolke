@@ -16,7 +16,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self showWelcome];
+    [KeychainManager token].length > 0 ? [self showMain] : [self showWelcome];
     
     return YES;
 }

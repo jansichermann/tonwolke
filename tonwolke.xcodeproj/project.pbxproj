@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2C728719719BF800551630 /* JJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C728519719BF800551630 /* JJSObject.m */; };
+		3D2C728819719BF800551630 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C728619719BF800551630 /* readme.md */; };
+		3D2C728B19719C9100551630 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C728A19719C9100551630 /* Track.m */; };
+		3D2C728D19719F3200551630 /* Track_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C728C19719F3200551630 /* Track_Tests.m */; };
+		3D2C72901971A0E800551630 /* JS__NotificationObserverContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C728F1971A0E800551630 /* JS__NotificationObserverContainer.m */; };
 		3D7F5571196D90D700CF4A4A /* TWSCApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F5570196D90D700CF4A4A /* TWSCApi.m */; };
 		3D91C483196CAF1200EDE2C3 /* StreamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D91C482196CAF1200EDE2C3 /* StreamTableViewController.m */; };
 		3DE6BF3E196C6C900005A513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE6BF3D196C6C900005A513 /* Foundation.framework */; };
@@ -45,7 +50,6 @@
 		3DE6BFF7196C7B890005A513 /* JSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFB8196C7B890005A513 /* JSTableViewCell.m */; };
 		3DE6BFF8196C7B890005A513 /* JSTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFBA196C7B890005A513 /* JSTextFieldTableViewCell.m */; };
 		3DE6BFF9196C7B890005A513 /* JSTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFBC196C7B890005A513 /* JSTextViewTableViewCell.m */; };
-		3DE6BFFA196C7B890005A513 /* JS__NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFC1196C7B890005A513 /* JS__NotificationCenter.m */; };
 		3DE6BFFB196C7B890005A513 /* JSTableViewRowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFC3196C7B890005A513 /* JSTableViewRowModel.m */; };
 		3DE6BFFC196C7B890005A513 /* JSTableViewSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6BFC5196C7B890005A513 /* JSTableViewSectionModel.m */; };
 		3DE6BFFD196C7B890005A513 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3DE6BFC6196C7B890005A513 /* README */; };
@@ -82,6 +86,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D2C728419719BF800551630 /* JJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSObject.h; sourceTree = "<group>"; };
+		3D2C728519719BF800551630 /* JJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSObject.m; sourceTree = "<group>"; };
+		3D2C728619719BF800551630 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		3D2C728919719C9100551630 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		3D2C728A19719C9100551630 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		3D2C728C19719F3200551630 /* Track_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track_Tests.m; sourceTree = "<group>"; };
+		3D2C728E1971A0E800551630 /* JS__NotificationObserverContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JS__NotificationObserverContainer.h; sourceTree = "<group>"; };
+		3D2C728F1971A0E800551630 /* JS__NotificationObserverContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JS__NotificationObserverContainer.m; sourceTree = "<group>"; };
 		3D7F556F196D90D700CF4A4A /* TWSCApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSCApi.h; sourceTree = "<group>"; };
 		3D7F5570196D90D700CF4A4A /* TWSCApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSCApi.m; sourceTree = "<group>"; };
 		3D91C481196CAF1200EDE2C3 /* StreamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamTableViewController.h; sourceTree = "<group>"; };
@@ -157,8 +169,6 @@
 		3DE6BFBC196C7B890005A513 /* JSTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTextViewTableViewCell.m; sourceTree = "<group>"; };
 		3DE6BFBD196C7B890005A513 /* JSBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBase.h; sourceTree = "<group>"; };
 		3DE6BFBE196C7B890005A513 /* JSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMacros.h; sourceTree = "<group>"; };
-		3DE6BFC0196C7B890005A513 /* JS__NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JS__NotificationCenter.h; sourceTree = "<group>"; };
-		3DE6BFC1196C7B890005A513 /* JS__NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JS__NotificationCenter.m; sourceTree = "<group>"; };
 		3DE6BFC2196C7B890005A513 /* JSTableViewRowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableViewRowModel.h; sourceTree = "<group>"; };
 		3DE6BFC3196C7B890005A513 /* JSTableViewRowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTableViewRowModel.m; sourceTree = "<group>"; };
 		3DE6BFC4196C7B890005A513 /* JSTableViewSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableViewSectionModel.h; sourceTree = "<group>"; };
@@ -225,6 +235,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2C728319719BF800551630 /* JJSObject */ = {
+			isa = PBXGroup;
+			children = (
+				3D2C728419719BF800551630 /* JJSObject.h */,
+				3D2C728519719BF800551630 /* JJSObject.m */,
+				3D2C728619719BF800551630 /* readme.md */,
+			);
+			path = JJSObject;
+			sourceTree = "<group>";
+		};
 		3DE6BF31196C6C900005A513 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +315,8 @@
 				3D91C482196CAF1200EDE2C3 /* StreamTableViewController.m */,
 				3D7F556F196D90D700CF4A4A /* TWSCApi.h */,
 				3D7F5570196D90D700CF4A4A /* TWSCApi.m */,
+				3D2C728919719C9100551630 /* Track.h */,
+				3D2C728A19719C9100551630 /* Track.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -302,6 +324,7 @@
 		3DE6BF81196C7B890005A513 /* submodules */ = {
 			isa = PBXGroup;
 			children = (
+				3D2C728319719BF800551630 /* JJSObject */,
 				3DE6BF82196C7B890005A513 /* JS */,
 			);
 			path = submodules;
@@ -401,8 +424,8 @@
 		3DE6BFBF196C7B890005A513 /* misc */ = {
 			isa = PBXGroup;
 			children = (
-				3DE6BFC0196C7B890005A513 /* JS__NotificationCenter.h */,
-				3DE6BFC1196C7B890005A513 /* JS__NotificationCenter.m */,
+				3D2C728E1971A0E800551630 /* JS__NotificationObserverContainer.h */,
+				3D2C728F1971A0E800551630 /* JS__NotificationObserverContainer.m */,
 				3DE6BFC2196C7B890005A513 /* JSTableViewRowModel.h */,
 				3DE6BFC3196C7B890005A513 /* JSTableViewRowModel.m */,
 				3DE6BFC4196C7B890005A513 /* JSTableViewSectionModel.h */,
@@ -446,6 +469,7 @@
 				3DE6C013196C84390005A513 /* Supporting Files */,
 				3DE6C020196C846F0005A513 /* AuthTokenParser_Tests.m */,
 				3DE6C25E196CA50F0005A513 /* Keychain_Tests.m */,
+				3D2C728C19719F3200551630 /* Track_Tests.m */,
 			);
 			path = "tonwolke Tests";
 			sourceTree = "<group>";
@@ -538,6 +562,7 @@
 				3DE6BFFD196C7B890005A513 /* README in Resources */,
 				3DE6BF76196C78130005A513 /* InfoPlist.strings in Resources */,
 				3DE6BFDE196C7B890005A513 /* .gitignore in Resources */,
+				3D2C728819719BF800551630 /* readme.md in Resources */,
 				3DE6BF77196C78130005A513 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +585,7 @@
 				3DE6BFEC196C7B890005A513 /* UIControl+JS.m in Sources */,
 				3DE6C262196CA6C40005A513 /* KeychainManager+TW.m in Sources */,
 				3DE6C004196C7B890005A513 /* JSSegmentedControl.m in Sources */,
+				3D2C728B19719C9100551630 /* Track.m in Sources */,
 				3DE6BFF3196C7B890005A513 /* JSAttributedStringTableViewCell.m in Sources */,
 				3DE6BFEF196C7B890005A513 /* UILabel+JS.m in Sources */,
 				3D7F5571196D90D700CF4A4A /* TWSCApi.m in Sources */,
@@ -567,10 +593,12 @@
 				3DE6C024196C84B60005A513 /* AuthTokenParser.m in Sources */,
 				3DE6BF7A196C78130005A513 /* main.m in Sources */,
 				3DE6BFE3196C7B890005A513 /* NSData+JS.m in Sources */,
+				3D2C72901971A0E800551630 /* JS__NotificationObserverContainer.m in Sources */,
 				3DE6BFE2196C7B890005A513 /* NSAttributedString+JS.m in Sources */,
 				3DE6C006196C7B890005A513 /* JSTextField.m in Sources */,
 				3DE6C002196C7B890005A513 /* JSPageControl.m in Sources */,
 				3DE6C25D196CA3980005A513 /* KeychainManager.m in Sources */,
+				3D2C728719719BF800551630 /* JJSObject.m in Sources */,
 				3DE6BF79196C78130005A513 /* AppDelegate.m in Sources */,
 				3DE6BFE9196C7B890005A513 /* NSString+JS.m in Sources */,
 				3DE6BFDF196C7B890005A513 /* JSButton.m in Sources */,
@@ -584,7 +612,6 @@
 				3DE6C001196C7B890005A513 /* JSInsetImageView.m in Sources */,
 				3DE6C007196C7B890005A513 /* JSTextView.m in Sources */,
 				3DE6BFEA196C7B890005A513 /* UIBarButtonItem+JSButton.m in Sources */,
-				3DE6BFFA196C7B890005A513 /* JS__NotificationCenter.m in Sources */,
 				3DE6BFEE196C7B890005A513 /* UIImage+JS.m in Sources */,
 				3DE6C000196C7B890005A513 /* JSImageView.m in Sources */,
 				3DE6BFF7196C7B890005A513 /* JSTableViewCell.m in Sources */,
@@ -614,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE6C021196C846F0005A513 /* AuthTokenParser_Tests.m in Sources */,
+				3D2C728D19719F3200551630 /* Track_Tests.m in Sources */,
 				3DE6C25F196CA50F0005A513 /* Keychain_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

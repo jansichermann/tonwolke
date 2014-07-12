@@ -4,7 +4,7 @@
 #import "JSTableViewRowModel.h"
 #import "JSTableViewSectionModel.h"
 #import "NSAttributedString+JS.h"
-
+#import "Track.h"
 
 
 
@@ -40,17 +40,17 @@
     
     __weak StreamTableViewController *weakSelf = self;
     
-    for (NSDictionary *track in tracks) {
+    for (Track *track in tracks) {
         [rows addObject:
          [JSTableViewRowModel withModel:
           [JSAttributedStringTableViewCellModel withText:
-           [NSAttributedString withString:track[@"origin"][@"title"]
+           [NSAttributedString withString:track.title
                                      font:[UIFont systemFontOfSize:14.f]
                                     color:[UIColor blackColor]]]
                               cellClass:[JSAttributedStringTableViewCell class]
                                 onClick:^{
                                     StreamTableViewController *strongSelf = weakSelf;
-                                    [strongSelf openSound];
+                                    [strongSelf openTrack:track];
                                 }]
          ];
     }
@@ -60,7 +60,7 @@
     [self.tableView reloadData];
 }
 
-- (void)openSound {
+- (void)openTrack:(Track *)track {
     
 }
 
