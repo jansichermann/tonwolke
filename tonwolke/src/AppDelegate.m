@@ -6,6 +6,14 @@
 #import "JSAlertView.h"
 #import "StreamTableViewController.h"
 #import "UIColor+TWSC.h"
+#import "WaveformDownloadManager.h"
+
+
+
+@interface AppDelegate ()
+@property (nonatomic) WaveformDownloadManager *waveformDownloadManager;
+@end
+
 
 
 @implementation AppDelegate
@@ -18,6 +26,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self.class setAppearance];
     [KeychainManager token].length > 0 ? [self showMain] : [self showWelcome];
+    
+    self.waveformDownloadManager = [WaveformDownloadManager withSession:nil];
     
     return YES;
 }

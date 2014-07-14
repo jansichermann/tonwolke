@@ -76,6 +76,7 @@
 		3DE6C25D196CA3980005A513 /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C25C196CA3980005A513 /* KeychainManager.m */; };
 		3DE6C25F196CA50F0005A513 /* Keychain_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C25E196CA50F0005A513 /* Keychain_Tests.m */; };
 		3DE6C262196CA6C40005A513 /* KeychainManager+TW.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE6C261196CA6C40005A513 /* KeychainManager+TW.m */; };
+		3DF50D8819747CE700EE0B4A /* WaveformDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF50D8719747CE700EE0B4A /* WaveformDownloadManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,8 @@
 		3DE6C25E196CA50F0005A513 /* Keychain_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain_Tests.m; sourceTree = "<group>"; };
 		3DE6C260196CA6C40005A513 /* KeychainManager+TW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeychainManager+TW.h"; sourceTree = "<group>"; };
 		3DE6C261196CA6C40005A513 /* KeychainManager+TW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KeychainManager+TW.m"; sourceTree = "<group>"; };
+		3DF50D8619747CE700EE0B4A /* WaveformDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveformDownloadManager.h; sourceTree = "<group>"; };
+		3DF50D8719747CE700EE0B4A /* WaveformDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveformDownloadManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +335,8 @@
 				3D2C72951971AF5000551630 /* UIFont+TWSC.m */,
 				3D2C72971971AFB600551630 /* UIColor+TWSC.h */,
 				3D2C72981971AFB600551630 /* UIColor+TWSC.m */,
+				3DF50D8619747CE700EE0B4A /* WaveformDownloadManager.h */,
+				3DF50D8719747CE700EE0B4A /* WaveformDownloadManager.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -637,6 +642,7 @@
 				3DE6BFE7196C7B890005A513 /* NSOrderedSet+JS.m in Sources */,
 				3DE6BFE6196C7B890005A513 /* NSObject+JS.m in Sources */,
 				3DE6BF80196C7A960005A513 /* WelcomeViewController.m in Sources */,
+				3DF50D8819747CE700EE0B4A /* WaveformDownloadManager.m in Sources */,
 				3DE6BFEB196C7B890005A513 /* UIColor+JS.m in Sources */,
 				3DE6BFFB196C7B890005A513 /* JSTableViewRowModel.m in Sources */,
 				3DE6BFFF196C7B890005A513 /* JSAlertView.m in Sources */,

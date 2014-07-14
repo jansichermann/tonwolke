@@ -65,9 +65,10 @@ static NSString * const meActivitiesEndpoint = @"https://api.soundcloud.com/me/a
         
         if (trackDict
             && [trackDict isKindOfClass:[NSDictionary class]]) {
+            
             NSDictionary *originDict = trackDict[@"origin"];
-            if (originDict) {
-                Track *t = [Track withDictionary:originDict];
+            Track *t = [self _parsedTrackFromApiDict:originDict];
+            if (t) {
                 [tracks addObject:t];
             }
         }
@@ -75,6 +76,18 @@ static NSString * const meActivitiesEndpoint = @"https://api.soundcloud.com/me/a
     }
     
     return tracks.copy;
+}
+
++ (Track *)_parsedTrackFromApiDict:(NSDictionary *)apiDict {
+    return apiDict ? [Track withDictionary:[self _modelDictFromApiDict:apiDict]] : nil;
+}
+
++ (NSDictionary *)_modelDictFromApiDict:(NSDictionary *)apiDict {
+    return [apiDict dictionaryWithCopiedKeysToKeys:@{@"id" : @"objectId",
+                                                     @"waveform_url" : @"waveformUrl",
+                                                     @"permalink_url" : @"permalinkUrl",
+                                                     @"title" : @"title"
+                                                     }];
 }
 
 + (NSURLRequest *)authorizedGetRequestWithUrlString:(NSString *)urlString {

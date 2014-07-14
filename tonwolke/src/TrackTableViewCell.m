@@ -1,11 +1,13 @@
 #import "TrackTableViewCell.h"
 #import "Track.h"
-#import "JSImageView.h"
 #import "UIFont+TWSC.h"
 #import "UIColor+TWSC.h"
 #import "UIView+JS.h"
 #import "UIColor+JS.h"
 #import "NSAttributedString+JS.h"
+#import "WaveformDownloadManager.h"
+#import "NSObject+JS.h"
+
 
 
 static const CGFloat titleMarginLeft = 8.f;
@@ -64,7 +66,7 @@ static const CGFloat topPadding = 4.f;
     titleLabel.left = titleMarginLeft;
     [self.contentView addSubview:titleLabel];
     
-    JSImageView *iv = [[JSImageView alloc] initWithFrame:CGRectZero];
+    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectZero];
     iv.backgroundColor = [UIColor TWSCBackgroundColor];
     iv.width = self.contentView.width;
     iv.height = [TrackTableViewCell _waveFormHeightForWidth:self.contentView.width];
@@ -78,23 +80,46 @@ static const CGFloat topPadding = 4.f;
     bottomRule.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     [self.contentView addSubview:bottomRule];
     
-    NSURLSession *session =
-    [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
     CGFloat contentViewWidth = self.contentView.width;
+
+    __weak TrackTableViewCell *weakSelf = self;
+    __weak NSNotificationCenter *weakDefaultCenter = [NSNotificationCenter defaultCenter];
+    __weak UIImageView *weakIv = iv;
+    __weak UILabel *weakTitleLabel = titleLabel;
     
     self.configureBlock = ^(Track *track) {
-        titleLabel.attributedText = [TrackTableViewCell _attributedTitleForTrack:track];
-        [iv loadImageFromUrlString:track.waveform_url
-                       withSession:session];
-        titleLabel.height = [TrackTableViewCell _heightForTrackTitle:track
+        UILabel *strongTitleLabel = weakTitleLabel;
+        strongTitleLabel.attributedText = [TrackTableViewCell _attributedTitleForTrack:track];
+        
+        if (track.waveformUrl) {
+            NSNotificationCenter *strongDefaultCenter = weakDefaultCenter;
+            
+            TrackTableViewCell *strongSelf = weakSelf;
+            [strongSelf observeNotificationCenter:strongDefaultCenter
+                                              key:[WaveformDownloadManager notificationKeyForUrlString:track.waveformUrl]
+                                    withFireBlock:^(UIImage *image) {
+                                        UIImageView *strongIv = weakIv;
+                                        strongIv.image = image;
+                                    }];
+            [strongDefaultCenter postNotificationName:downloadWaveFormNotificationKey
+                                               object:track.waveformUrl];
+        }
+        
+        strongTitleLabel.height = [TrackTableViewCell _heightForTrackTitle:track
                                                             maxWidth:contentViewWidth - titleMarginLeft];
-        iv.top = titleLabel.bottom;
+        UIImageView *strongIv = weakIv;
+        strongIv.top = strongTitleLabel.bottom;
     };
     
     self.prepareForReuseBlock = ^{
-        titleLabel.text = nil;
-        [iv cancelLoad];
+        UILabel *strongTitleLabel = weakTitleLabel;
+        strongTitleLabel.text = nil;
+        
+        UIImageView *strongIv = weakIv;
+        strongIv.image = nil;
+        
+        TrackTableViewCell *strongSelf = weakSelf;
+        [strongSelf removeAllObservations];
     };
     
     return self;

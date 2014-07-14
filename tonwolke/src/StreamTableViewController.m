@@ -25,7 +25,7 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.navigationItem.leftBarButtonItem = [self.class _logoutBarButtonItem];
-
+    
     [self refreshWithCursor:nil];
 
 }
@@ -88,7 +88,15 @@
 }
 
 + (void)openTrack:(Track *)track {
+    if (!track) {
+        return;
+    }
+    NSURL *appUrl =
+    [NSURL URLWithString:[NSString stringWithFormat:@"soundcloud://sounds/%@", track.objectId]];
     
+    [[UIApplication sharedApplication] canOpenURL:appUrl] ?
+    [[UIApplication sharedApplication] openURL:appUrl] :
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:track.permalinkUrl]];
 }
 
 @end

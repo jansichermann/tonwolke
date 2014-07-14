@@ -2,6 +2,7 @@
 
 @implementation Track
 @dynamic title;
-@dynamic waveform_url;
-
+@dynamic waveformUrl;
+@dynamic permalinkUrl;
+@dynamic objectId;
 @end
