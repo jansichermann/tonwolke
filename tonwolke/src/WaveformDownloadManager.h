@@ -21,5 +21,4 @@ extern NSString *downloadWaveFormNotificationKey;
  */
 + (instancetype)withSession:(NSURLSession *)session;
 + (NSString *)notificationKeyForUrlString:(NSString *)urlString;
-+ (instancetype)initWithSession:(NSURLSession *)session;
 @end
