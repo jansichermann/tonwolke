@@ -1,9 +1,12 @@
 #import "WelcomeViewController.h"
+
+#import "AppDelegate.h"
 #import "JSButton.h"
-#import "UIView+JS.h"
-#import "TWConstants.h"
-#import "AppDelegate.h" // move this
 #import "NSString+JS.h"
+#import "TWConstants.h"
+#import "UIView+JS.h"
+#import "UIColor+TWSC.h"
+
 
 @interface WelcomeViewController ()
 
@@ -15,9 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     JSButton *b = [JSButton buttonWithType:UIButtonTypeCustom];
-    b.backgroundColor = [UIColor orangeColor];
-    [b setTitle:@"Login" forState:UIControlStateNormal];
+    b.backgroundColor = [UIColor TWSCBackgroundColor];
+    [b setTitle:@"Login via Soundcloud"
+       forState:UIControlStateNormal];
+    
     b.frame = CGRectMake(10.f,
                          self.view.height - 66.f,
                          self.view.width - 20.f,
