@@ -16,9 +16,11 @@
 extern NSString *downloadWaveFormNotificationKey;
 
 @interface WaveformDownloadManager : NSObject
+
 /**
  Designated Initializer
  */
 + (instancetype)withSession:(NSURLSession *)session;
+
 + (NSString *)notificationKeyForUrlString:(NSString *)urlString;
 @end
