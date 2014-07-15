@@ -1,8 +1,8 @@
 #import "WaveformDownloadManager.h"
+
 #import "NSObject+JS.h"
 #import "NSSet+JS.h"
 #import "UIImage+JS.h"
-#import <malloc/malloc.h>
 
 
 
