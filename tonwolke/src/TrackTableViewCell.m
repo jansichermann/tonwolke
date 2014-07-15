@@ -11,12 +11,12 @@
 
 
 static const CGFloat titleMarginLeft = 8.f;
-static const CGFloat bottomPadding = 8.f;
+static const CGFloat bottomPadding = 0.f;
 static const CGFloat topPadding = 4.f;
 @implementation TrackTableViewCell
 
 + (CGSize)_waveFormSize __attribute__((const)){
-    return CGSizeMake(1800.f, 280.f);
+    return CGSizeMake(320.f, 50.f);
 }
 
 + (CGFloat)_waveFormHeightForWidth:(CGFloat)width __attribute__((const)) {
@@ -34,7 +34,7 @@ static const CGFloat topPadding = 4.f;
 + (CGFloat)heightForModel:(Track *)track
               inTableView:(UITableView *)tableView {
     return
-    [self _waveFormHeightForWidth:tableView.width]
+    [self _waveFormHeightForWidth:tableView.width] / 2.f
     + [self _heightForTrackTitle:track
                         maxWidth:tableView.width]
     + topPadding
