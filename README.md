@@ -1,3 +1,3 @@
 
 ![alt text][logo]
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: http://cl.ly/2T1y1w39410q/abacus_swipe_h264.mp4 "Logo Title Text 2"
